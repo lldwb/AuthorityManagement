@@ -1,4 +1,4 @@
-package top.lldwb.sae.utils.mySql;
+package top.lldwb.authorityManagement.utils;
 
 import org.nf.db.util.SqlExecutor;
 import org.nf.db.util.result.BeanHandler;
@@ -26,11 +26,11 @@ public class MySqlUtil {
         }
     }
 
-    private static final String URL = "jdbc:mysql://mysql.lldwb.top:3306/sae?serverTimezone=Asia/Shanghai&useSSL=false";
+    private static final String URL = "jdbc:mysql://mysql.lldwb.top:33366/authority_management?serverTimezone=Asia/Shanghai&useSSL=false";
     //账号
-    private static final String USER_NAME = "sae";
+    private static final String USER_NAME = "root";
     //密码
-    private static final String PASSWORD = "PBERGLmSDfr2Mzxi";
+    private static final String PASSWORD = "@dwb123456";
 
     private static SqlExecutor getSqlExecutor() {
         try {

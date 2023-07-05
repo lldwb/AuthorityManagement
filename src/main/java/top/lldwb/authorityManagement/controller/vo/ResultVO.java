@@ -1,4 +1,4 @@
-package top.lldwb.sae.utils.vo;
+package top.lldwb.authorityManagement.controller.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
