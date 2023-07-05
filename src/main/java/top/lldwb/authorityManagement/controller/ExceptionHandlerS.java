@@ -1,8 +1,7 @@
-package top.lldwb.sae.api.exception;
+package top.lldwb.authorityManagement.controller;
 
 import org.nf.web.annotation.ExceptionHandler;
 import org.nf.web.servlet.view.JsonView;
-import top.lldwb.sae.api.controller.BaseController;
 
 /**
  * 异常处理

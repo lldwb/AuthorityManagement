@@ -1,14 +1,10 @@
-package top.lldwb.sae.api.controller;
+package top.lldwb.authorityManagement.controller;
 
-import top.lldwb.sae.utils.vo.PageVO;
-import top.lldwb.sae.utils.vo.ResultVO;
+import top.lldwb.authorityManagement.controller.vo.PageVO;
+import top.lldwb.authorityManagement.controller.vo.ResultVO;
 
 import java.util.List;
 
-/***
- * @Date(时间)2023-06-30
- * @Author 家辉
- */
 public class BaseController {
     /**
      * 成功响应(比如在查询、第三方api等，需要返回数据的时候使用)

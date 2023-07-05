@@ -5,4 +5,5 @@ package top.lldwb.authorityManagement.service;
  * @version 1.0
  */
 public interface AuthorityManagementService {
+    Boolean judge(String userId,String url);
 }
