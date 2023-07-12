@@ -15,5 +15,4 @@ public class Role {
     private Integer roleLevel;
     @Column("role_describe")
     private String roleDescribe;
-
 }

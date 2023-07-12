@@ -5,6 +5,7 @@ import top.lldwb.authorityManagement.dao.AuthorityManagementDAO;
 import top.lldwb.authorityManagement.entity.Role;
 import top.lldwb.authorityManagement.service.AuthorityManagementService;
 import top.lldwb.authorityManagement.service.impl.AuthorityManagementServiceImpl;
+import top.lldwb.authorityManagement.utils.MySqlUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import java.rmi.RemoteException;
@@ -24,11 +25,17 @@ public class AuthorityManagementDAOImplTest {
 //        System.out.println(purviewRole);
 
 
-        //请求获取(相对路径)url地址
-        String url = "/CityInfo/getCityInfoByCityName";
-        AuthorityManagementService service = new AuthorityManagementServiceImpl();
-        System.out.println(url);
-        System.out.println("1");
-        System.out.println(service.judge("1",url));
+//        //请求获取(相对路径)url地址
+//        String url = "/CityInfo/getCityInfoByCityName";
+//        AuthorityManagementService service = new AuthorityManagementServiceImpl();
+//        System.out.println(url);
+//        System.out.println("1");
+//        System.out.println(service.judge("1",url));
+
+        String str = MySqlUtil.queryColumn(1,"select purview_describe from purview join role_purview where purview.purview_id = role_purview.purview_id and role_id = 1 and purview_url = '/CityInfo/getCityInfo'");
+        System.out.println(str);
+
+        str = MySqlUtil.queryColumn(1,"select purview_describe from purview join role_purview where purview.purview_id = role_purview.purview_id and role_id = 1 and purview_url = '/CityInfo/getCityIcnfo'");
+        System.out.println(str==null);
     }
 }
