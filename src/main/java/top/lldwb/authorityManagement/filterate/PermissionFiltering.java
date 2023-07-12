@@ -29,16 +29,19 @@ public class PermissionFiltering implements Filter {
          则表示用户正在登录或执行在线操作，此时通过filterChain.doFilter(request, response)方法直接放行，让请求继续向目标资源进行处理。
          */
         //请求获取(相对路径)url地址
-        String url = ((HttpServletRequest) request).getRequestURI();
+        HttpServletRequest servletRequest = (HttpServletRequest) request;
+        String url = servletRequest.getRequestURI();
         AuthorityManagementService service = new AuthorityManagementServiceImpl();
         System.out.println(url);
-        String userId = request.getParameter("userId");
+        // 使用传参
+//        String userId = request.getParameter("userId");
+        // 使用会话
+        String userId = (String) servletRequest.getSession().getAttribute("userId");
         System.out.println(userId);
         if (service.judge(userId, url)) {
             System.out.println(123);
             chain.doFilter(request, response);
         } else {
-//            new BaseController().error(500,"没有权限")
             // 设置请求和响应为utf-8编码
 //            request.setCharacterEncoding("utf-8");
 //            response.setCharacterEncoding("utf-8");
