@@ -16,10 +16,9 @@ public class AuthorityManagementServiceImpl implements AuthorityManagementServic
     public Boolean judge(String userId, String url) {
 
         AuthorityManagementDAO dao = new AuthorityManagementDAOImpl();
-        // 根据用户id获取角色id集合
         List<Role> roleUser = dao.getRoleIdAllByUserId(userId);
-        // 根据url获取角色id集合
         List<Role> rolePurview = dao.getRoleIdAllByPurviewUrl(url);
+        // 遍历集合
         for (Role roleIdUser : roleUser) {
             for (Role roleIdPurview : rolePurview) {
                 if (roleIdUser.getRoleId() == roleIdPurview.getRoleId()) {
