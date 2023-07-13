@@ -18,8 +18,8 @@ public class AuthorityManagementDAOImplTest {
     @Test
     public void dao(){
 //        AuthorityManagementDAO dao = new AuthorityManagementDAOImpl();
-//        Role userRole = dao.getRoleIdByUserId("1");
-////        Role userRole = dao.getRoleIdByUserId(null);
+//        Role userRole = dao.getRoleIdAllByUserId("1");
+////        Role userRole = dao.getRoleIdAllByUserId(null);
 //        System.out.println(userRole);
 //        Role purviewRole = dao.getRoleIdByPurviewUrl("/CityInfo/getCityInfo");
 //        System.out.println(purviewRole);
@@ -30,7 +30,7 @@ public class AuthorityManagementDAOImplTest {
 //        AuthorityManagementService service = new AuthorityManagementServiceImpl();
 //        System.out.println(url);
 //        System.out.println("1");
-//        System.out.println(service.judge("1",url));
+//        System.out.println(service.getRoleIdAllByPurviewUrl("1",url));
 
 
 //        String str = MySqlUtil.queryColumn(1,"select purview_describe from purview join role_purview where purview.purview_id = role_purview.purview_id and role_id = 1 and purview_url = '/CityInfo/getCityInfo'");

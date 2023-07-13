@@ -1,6 +1,6 @@
 package top.lldwb.authorityManagement.dao;
 
-import top.lldwb.authorityManagement.entity.Role;
+import java.util.List;
 
 /**
  * @author 安然的尾巴
@@ -8,20 +8,19 @@ import top.lldwb.authorityManagement.entity.Role;
  */
 public interface AuthorityManagementDAO {
     /**
-     * 返回用户对应的角色
+     * 根据用户id获取角色id集合
      *
      * @param userId
-     * @return 角色实体类
+     * @return 角色id集合
      */
-    Role getRoleIdByUserId(String userId);
+    List<Integer> getRoleIdAllByUserId(String userId);
 
     /**
-     * 判断是否有权限
+     * 根据url获取角色id集合
      *
-     * @param roleId 角色id
-     * @param url    访问的url地址
-     * @return 判断
+     * @param url 访问的url地址
+     * @return 角色id集合
      */
-    Boolean judge(int roleId, String url);
+    List<Integer> getRoleIdAllByPurviewUrl(String url);
 
 }

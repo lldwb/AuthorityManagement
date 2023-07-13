@@ -5,6 +5,8 @@ import top.lldwb.authorityManagement.dao.impl.AuthorityManagementDAOImpl;
 import top.lldwb.authorityManagement.entity.Role;
 import top.lldwb.authorityManagement.service.AuthorityManagementService;
 
+import java.util.List;
+
 /**
  * @author 安然的尾巴
  * @version 1.0
@@ -14,7 +16,17 @@ public class AuthorityManagementServiceImpl implements AuthorityManagementServic
     public Boolean judge(String userId, String url) {
 
         AuthorityManagementDAO dao = new AuthorityManagementDAOImpl();
-        Role userRole = dao.getRoleIdByUserId(userId);
-        return dao.judge(userRole.getRoleId(),url);
+        // 根据用户id获取角色id集合
+        List<Integer> roleUser = dao.getRoleIdAllByUserId(userId);
+        // 根据url获取角色id集合
+        List<Integer> rolePurview = dao.getRoleIdAllByPurviewUrl(url);
+        for (Integer roleIdUser : roleUser) {
+            for (Integer roleIdPurview : rolePurview) {
+                if (roleIdUser == roleIdPurview) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
