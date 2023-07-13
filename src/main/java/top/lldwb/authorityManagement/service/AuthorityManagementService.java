@@ -5,5 +5,12 @@ package top.lldwb.authorityManagement.service;
  * @version 1.0
  */
 public interface AuthorityManagementService {
-    Boolean judge(String userId,String url);
+    /**
+     * 判断是否有权限
+     *
+     * @param userId
+     * @param url
+     * @return
+     */
+    Boolean judge(String userId, String url);
 }
