@@ -1,9 +1,6 @@
 package top.lldwb.authorityManagement.dao;
 
-import top.lldwb.authorityManagement.entity.Purview;
 import top.lldwb.authorityManagement.entity.Role;
-
-import java.util.Map;
 
 /**
  * @author 安然的尾巴

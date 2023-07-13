@@ -5,11 +5,6 @@ import top.lldwb.authorityManagement.dao.impl.AuthorityManagementDAOImpl;
 import top.lldwb.authorityManagement.entity.Role;
 import top.lldwb.authorityManagement.service.AuthorityManagementService;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 /**
  * @author 安然的尾巴
  * @version 1.0

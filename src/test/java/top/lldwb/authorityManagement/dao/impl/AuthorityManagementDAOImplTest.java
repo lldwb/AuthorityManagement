@@ -32,10 +32,11 @@ public class AuthorityManagementDAOImplTest {
 //        System.out.println("1");
 //        System.out.println(service.judge("1",url));
 
-        String str = MySqlUtil.queryColumn(1,"select purview_describe from purview join role_purview where purview.purview_id = role_purview.purview_id and role_id = 1 and purview_url = '/CityInfo/getCityInfo'");
-        System.out.println(str);
 
-        str = MySqlUtil.queryColumn(1,"select purview_describe from purview join role_purview where purview.purview_id = role_purview.purview_id and role_id = 1 and purview_url = '/CityInfo/getCityIcnfo'");
-        System.out.println(str==null);
+//        String str = MySqlUtil.queryColumn(1,"select purview_describe from purview join role_purview where purview.purview_id = role_purview.purview_id and role_id = 1 and purview_url = '/CityInfo/getCityInfo'");
+//        System.out.println(str);
+//
+//        str = MySqlUtil.queryColumn(1,"select purview_describe from purview join role_purview where purview.purview_id = role_purview.purview_id and role_id = 1 and purview_url = '/CityInfo/getCityIcnfo'");
+//        System.out.println(str==null);
     }
 }
