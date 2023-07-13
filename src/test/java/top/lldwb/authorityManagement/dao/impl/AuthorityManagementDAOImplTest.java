@@ -38,5 +38,8 @@ public class AuthorityManagementDAOImplTest {
 //
 //        str = MySqlUtil.queryColumn(1,"select purview_describe from purview join role_purview where purview.purview_id = role_purview.purview_id and role_id = 1 and purview_url = '/CityInfo/getCityIcnfo'");
 //        System.out.println(str==null);
+
+
+        System.out.println(MySqlUtil.queryList(Integer.class, "select role.role_id from role join role_user where role.role_id = role_user.role_id and user_id = ?;",1));
     }
 }

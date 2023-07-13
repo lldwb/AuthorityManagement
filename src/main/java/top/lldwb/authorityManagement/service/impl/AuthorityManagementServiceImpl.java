@@ -17,12 +17,12 @@ public class AuthorityManagementServiceImpl implements AuthorityManagementServic
 
         AuthorityManagementDAO dao = new AuthorityManagementDAOImpl();
         // 根据用户id获取角色id集合
-        List<Integer> roleUser = dao.getRoleIdAllByUserId(userId);
+        List<Role> roleUser = dao.getRoleIdAllByUserId(userId);
         // 根据url获取角色id集合
-        List<Integer> rolePurview = dao.getRoleIdAllByPurviewUrl(url);
-        for (Integer roleIdUser : roleUser) {
-            for (Integer roleIdPurview : rolePurview) {
-                if (roleIdUser == roleIdPurview) {
+        List<Role> rolePurview = dao.getRoleIdAllByPurviewUrl(url);
+        for (Role roleIdUser : roleUser) {
+            for (Role roleIdPurview : rolePurview) {
+                if (roleIdUser.getRoleId() == roleIdPurview.getRoleId()) {
                     return true;
                 }
             }

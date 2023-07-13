@@ -1,5 +1,7 @@
 package top.lldwb.authorityManagement.dao;
 
+import top.lldwb.authorityManagement.entity.Role;
+
 import java.util.List;
 
 /**
@@ -8,19 +10,19 @@ import java.util.List;
  */
 public interface AuthorityManagementDAO {
     /**
-     * 根据用户id获取角色id集合
+     * 根据用户id获取角色集合
      *
      * @param userId
      * @return 角色id集合
      */
-    List<Integer> getRoleIdAllByUserId(String userId);
+    List<Role> getRoleIdAllByUserId(String userId);
 
     /**
-     * 根据url获取角色id集合
+     * 根据url获取角色集合
      *
      * @param url 访问的url地址
      * @return 角色id集合
      */
-    List<Integer> getRoleIdAllByPurviewUrl(String url);
+    List<Role> getRoleIdAllByPurviewUrl(String url);
 
 }

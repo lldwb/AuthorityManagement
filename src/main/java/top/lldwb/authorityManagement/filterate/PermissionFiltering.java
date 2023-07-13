@@ -34,9 +34,9 @@ public class PermissionFiltering implements Filter {
         System.out.println(url);
 
         // 使用传参
-//        String userId = request.getParameter("userId");
+        String userId = request.getParameter("userId");
         // 使用会话
-        String userId = (String) servletRequest.getSession().getAttribute("userId");
+//        String userId = (String) servletRequest.getSession().getAttribute("userId");
         System.out.println(userId);
 
         // 判断是否有权限
